@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package = "com.clarix.employeemanagement.model">
+
+    <class name = "Employee" table = "employee">
+        <id name = "id" column = "id">
+            <generator class = "increment"/>
+        </id>
+
+        <property name = "name"/>
+        <property name = "dateOfBirth"/>
+        <property name = "age"/>
+        <property name = "phoneNumber"/>
+        <property name = "salary"/>
+        <property name = "email"/>
+        <property name = "active"/>
+
+        <one-to-one name = "address" class = "Address" cascade = "all"
+                constrained = "true"/>
+    </class>
+</hibernate-mapping>
