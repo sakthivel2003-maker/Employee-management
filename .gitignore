@@ -1,0 +1,5 @@
+#Ignored compiled java files
+*.class
+
+#Ignored library folder(dependencies)
+library/
